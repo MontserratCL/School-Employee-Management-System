@@ -13,15 +13,15 @@ public:
 
 // Constructors
     Employee();
-    Employee(const std::string& name, int id, int age);
+    Employee(std::string& name, int id, int age);
 
     // Getters
-    std::string getName() const;
-    int getId() const;
-    int getAge() const;
+    std::string getName();
+    int getId();
+    int getAge();
     
     // Setters
-    void setName(const std::string& name);
+    void setName(std::string& name);
     void setId(int id);
     void setAge(int age);
 };
