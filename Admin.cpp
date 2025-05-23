@@ -11,29 +11,29 @@ Admin::Admin(string name, int age, int id, string department, int entryHour, int
   
 string Admin::getDepartment() {
 	return department;
-}
+};
 
 void Admin::setDepartment(string department) {
 	department = department;	
-}
+};
     
 int Admin::getEntryHour() {
 	return entryHour;
-}
+};
 
 void Admin::setEntryHour(int entryHour) {
 	entryHour = entryHour;	
-}
+};
 
 int Admin::getExitHour() {
 	return exitHour;
-}
+};
 
 void Admin::setExitHour(int exitHour) {
 	exitHour = exitHour;	
-}
+};
 
 string Admin::getInfo(){
 	string text = "Name: "+name+"\nAge:"+age+"\nId: "+id+"\nDepartment: "+department+"\nOffice Hours: "+to_string(entryHour)+" : "+to_string(exitHour);
 	return text;
-}
+};
