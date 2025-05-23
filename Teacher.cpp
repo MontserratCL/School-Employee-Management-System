@@ -27,15 +27,10 @@ void Teacher::setSubject( std::string subject) {
 void Teacher::setHours(int hours) {
     this->hours = hours;
 }
-
-// Public Method
-std::string Teacher::getInfo() const {
-    std::stringstream info;
-    info << "Teacher Information:\n";
-    info << "Name: " << getName() << "\n";
-    info << "ID: " << getId() << "\n";
-    info << "Age: " << getAge() << "\n";
-    info << "Subject: " << subject << "\n";
-    info << "Hours: " << hours;
-    return info.str();
+//public method 
+std::string Teacher::getInfo()  {
+    std::string text = "Name: " + getName() + "\nAge: " + std::to_string(getAge()) + "\nID: " + std::to_string(getId()) + "\nSubject: " + subject + "\nHours: " + std::to_string(hours);
+    return text;
 }
+
+#endif
