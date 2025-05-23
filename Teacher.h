@@ -23,6 +23,6 @@ public:
     void setHours(int hours);
     
     // Method for info
-    std::string getInfo();
+    std::string getInfo() override;
 };
 #endif

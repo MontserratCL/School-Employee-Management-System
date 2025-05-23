@@ -32,7 +32,7 @@ void Teacher::setHours(int hours) {
 }
 //public method 
 string Teacher::getInfo(){
-    string text = "Name: " + getName() + "\nAge: " + std::to_string(getAge()) + "\nID: " + std::to_string(getId()) + "\nSubject: " + subject + "\nHours: " + std::to_string(hours);
+    string text = "Name: " + getName() + "\nAge: " + std::to_string(getAge()) + "\nID: " + std::to_string(getId()) + "\nDuties: Teaches " + subject + " for "+ std::to_string(hours)+" hours: ";
     return text;
 }
 
