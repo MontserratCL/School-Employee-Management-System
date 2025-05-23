@@ -1,5 +1,8 @@
 #include "Teacher.h"
-#include <sstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 // Constructor defect
 Teacher::Teacher() : Employee(), subject(""), hours(0) {
@@ -28,9 +31,8 @@ void Teacher::setHours(int hours) {
     this->hours = hours;
 }
 //public method 
-std::string Teacher::getInfo()  {
-    std::string text = "Name: " + getName() + "\nAge: " + std::to_string(getAge()) + "\nID: " + std::to_string(getId()) + "\nSubject: " + subject + "\nHours: " + std::to_string(hours);
+string Teacher::getInfo(){
+    string text = "Name: " + getName() + "\nAge: " + std::to_string(getAge()) + "\nID: " + std::to_string(getId()) + "\nSubject: " + subject + "\nHours: " + std::to_string(hours);
     return text;
 }
 
-#endif

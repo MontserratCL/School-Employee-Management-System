@@ -1,5 +1,6 @@
 #ifndef TEACHER_H
 #define TEACHER_H
+
 #include "Employee.h"
 #include <string>
 
@@ -22,6 +23,6 @@ public:
     void setHours(int hours);
     
     // Method for info
-    std::string getInfo() const;
+    std::string getInfo();
 };
 #endif

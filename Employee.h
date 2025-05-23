@@ -4,7 +4,7 @@
 #include <string>
 
 class Employee {
-private:
+protected:
     std::string name;
     int id;
     int age;
@@ -13,7 +13,7 @@ public:
 
 // Constructors
     Employee();
-    Employee(std::string& name, int id, int age);
+    Employee(std::string name, int id, int age);
 
     // Getters
     std::string getName();
@@ -21,7 +21,7 @@ public:
     int getAge();
     
     // Setters
-    void setName(std::string& name);
+    void setName(std::string name);
     void setId(int id);
     void setAge(int age);
 };

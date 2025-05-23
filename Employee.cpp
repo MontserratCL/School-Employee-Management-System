@@ -1,11 +1,16 @@
 #include "Employee.h"
 
 //El constructor por defecto 
-Employee:Employee() : name(""), id(0), age(0) {
+Employee::Employee(){
+    name = "";
+    id = 0;
+    age = 18;
 }
 // COnstructor 
-Employee:Employee(std::string& name, int id, int age) 
-  : name(name), id(id), age(age) {
+Employee::Employee(std::string name_, int id_, int age_){
+    name = name_;
+    id = id_;
+    age = age_; 
 }
 // Getters
 std::string Employee::getName() {
@@ -21,7 +26,7 @@ int Employee::getAge(){
 }
 
 // Setters
-void Employee::setName(std::string& name) {
+void Employee::setName(std::string name) {
     this->name = name;
 }
 
