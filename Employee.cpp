@@ -42,7 +42,3 @@ void Employee::setAge(int age) {
     this->age = age;
 };
 
-string Employee::getInfo(){
-    string text = "Name: "+name+"\nAge: "+to_string(age)+"\nId: "+to_string(id)+"\n";
-    return text;
-};

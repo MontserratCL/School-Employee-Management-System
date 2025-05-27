@@ -24,7 +24,7 @@ public:
     void setName(std::string name);
     void setId(int id);
     void setAge(int age);
-    virtual std::string getInfo();
+    virtual std::string getInfo() = 0;
 };
 
 #endif 

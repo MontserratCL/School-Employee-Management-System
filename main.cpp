@@ -15,37 +15,29 @@ using namespace std;
 //Auxiliar functions
 
 Record start(){
+
     Teacher mario("Mario",14998,20,"Mathematics",7);
     Teacher christian("El Ingeniero",14999,32,"Engineering (Everything)",40);
-
-    vector <Teacher> teache = {mario,christian};
-
     Admin maria("Mariana",26,14997,"Tec Services",7,20);
     Admin juan("Juanito Bodoque",42,14996,"Tec Salud",6,24);
 
-    vector <Admin> admi = {maria,juan};
+    vector <Employee*> employees = {&mario,&christian,&maria,&juan};
 
+    Record officialRecord = Record(employees);
 
-    Record officialRecord = Record(teache,admi);
     cout<<"Welcome to you Employee Record"<<endl;
     cout<<" "<<endl;
     cout<<"The current employees are: "<<endl;
     
-    vector <Teacher> teachers = officialRecord.getTeacher();
-    vector <Admin> admins = officialRecord.getAdmin();
+    vector <Employee*> employe = officialRecord.getEmployee();
+    cout<< employe.size() <<endl;
 
-    for(int i=0; i<teachers.size();i++){
+
+    for(int i=0; i<employe.size();i++){
         cout<<"----Employee Info----- "<<endl;
-        cout<<teachers[i].getInfo()<<endl;
+        cout<< (*employe[i]).getInfo()<<endl;
         cout<<" "<<endl;
     }
-
-    for(int i=0; i<admins.size();i++){
-        cout<<"----Employee Info----- "<<endl;
-        cout<<admins[i].getInfo()<<endl;
-        cout<<" "<<endl;
-    }
-
     return officialRecord;
 };
 
@@ -83,23 +75,17 @@ int main(){
         switch (decision) {
 //----------------------------------------------------------------------
         case 1:{
-            vector <Teacher> teachers = official.getTeacher();
-            vector <Admin> admins = official.getAdmin();
+            vector <Employee*> employees = official.getEmployee();
 
             cout<<" "<<endl;
             cout<<"Your current employees are: "<<endl;
-            
-            for(int i=0; i<teachers.size();i++){
-                cout<<"----Employee Info----- "<<endl;
-                cout<<teachers[i].getInfo()<<endl;
+
+            for(int i=0; i<employees.size();i++){
+                //cout<<"----Employee Info----- "<<endl;
+                //cout<<(employees[i])->getInfo()<<endl;
                 cout<<" "<<endl;
             }
 
-            for(int i=0; i<admins.size();i++){
-                cout<<"----Employee Info----- "<<endl;
-                cout<<admins[i].getInfo()<<endl;
-                cout<<" "<<endl;
-            }
         }break;
 
 //----------------------------------------------------------------------
@@ -140,7 +126,7 @@ int main(){
                 cout<<""<<endl;
 
                 Teacher t(name,age,employees,subject,hours);
-                official.addTeacher(t);
+                official.addEmployee(&t);
 
 
             }break;
@@ -176,7 +162,7 @@ int main(){
                 cout<<""<<endl;
 
                 Admin a(name,employees,age,department,Entryhour,exitHour);
-                official.addAdmin(a);
+                official.addEmployee(&a);
 
             }break;
             

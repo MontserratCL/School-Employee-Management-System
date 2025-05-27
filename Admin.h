@@ -18,15 +18,16 @@ class Admin: public Employee {
         int exitHour;
         
     public:
-    	string getDepartment();
+    	Admin();
+		Admin(string, int, int, string, int, int);	
+		string getDepartment();
 		int getEntryHour();
 		int getExitHour();
 		void setDepartment(string);
 		void setEntryHour(int);
 		void setExitHour(int);
-		string getInfo();
-		Admin();
-		Admin(string, int, int, string, int, int);
+		string getInfo() override;
+		
 };  
 
 #endif

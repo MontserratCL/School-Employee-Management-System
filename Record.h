@@ -14,39 +14,29 @@ using namespace std;
 
 class Record{
     private:
-        vector <Teacher> teachers;
-        vector <Admin> admins;
+        vector <Employee*> employees;
 
     public:
         //Constructors
         Record();
             
-        Record(vector <Teacher> teachers_, vector <Admin> admins_);
+        Record(vector <Employee*> employees_);
 
         //----------------------------------------------------------
         //Getters
-        Teacher getTeacher(int num);
+        Employee* getEmployee(int num);
 
-        vector <Teacher> getTeacher();
-
-        Admin getAdmin(int num);
-
-        vector <Admin> getAdmin();
+        vector <Employee*> getEmployee();
 
 
         //----------------------------------------------------------
         //Setters
-        void setTeachers(vector <Teacher> teachers_);
-
-        void setAdmins(vector <Admin> admins_);
+        void setEmployees(vector <Employee*> employees_);
 
         //----------------------------------------------------------
         //Methods
 
-        void addTeacher(Teacher teacher_);
-
-        void addAdmin(Admin admin_);
-
+        void addEmployee(Employee* employee_);
 
 };
 
